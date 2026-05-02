@@ -22,6 +22,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="hero-bg.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+TC:wght@300;400&family=Tenor+Sans&family=Zen+Old+Mincho:wght@400;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#080808;--bg2:#0f0f0f;--surface:#141414;--border:#242424;--text:#e8e4dc;--text-dim:#8a8680;--text-muted:#3a3835;--gold:#c9a96e;--gold-dim:#7a6038;--white:#f5f2ed}
@@ -41,8 +42,8 @@ nav.scrolled{background:rgba(8,8,8,.97);border-bottom:1px solid var(--border)}
 .lang-btn{font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text);background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.25);padding:.3rem .65rem;cursor:none;transition:all .3s;backdrop-filter:blur(4px)}
 .lang-btn:hover{color:var(--gold);border-color:var(--gold-dim)}
 .hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:0 3rem 5rem}
-.hero-bg{position:absolute;inset:0;background-image:url('hero-bg.jpg');background-size:cover;background-position:center center;filter:brightness(.98);transform:scale(1.05);transition:transform 8s ease}
-.hero-bg.loaded{transform:scale(1)}
+.hero-bg{position:absolute;inset:0;background-image:url('hero-bg.jpg');background-size:cover;background-position:center center;filter:brightness(.98);transform:scale(1.05);transition:transform 8s ease, opacity .8s ease;opacity:0}
+.hero-bg.loaded{transform:scale(1);opacity:1}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.98) 0%,rgba(8,8,8,.35) 50%,rgba(8,8,8,.05) 100%)}
 .hero-content{position:relative;z-index:1;max-width:680px}
 .hero-eyebrow{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;opacity:0;animation:fadeUp 1s ease .4s forwards;display:inline-block;background:rgba(0,0,0,.6);padding:.35rem .75rem;backdrop-filter:blur(4px)}
@@ -650,7 +651,11 @@ document.querySelectorAll('a,button,.work-card,.node-photo').forEach(el=>{
 });
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-setTimeout(()=>document.getElementById('heroBg').classList.add('loaded'),100);
+const heroBg=document.getElementById('heroBg');
+const heroImg=new Image();
+heroImg.src='hero-bg.jpg';
+heroImg.onload=()=>heroBg.classList.add('loaded');
+if(heroImg.complete)heroBg.classList.add('loaded');
 const langBtn=document.getElementById('langBtn');
 let isEN=false;
 langBtn.addEventListener('click',()=>{
