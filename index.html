@@ -68,8 +68,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="hero-bg.jpg">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+TC:wght@300;400&family=Tenor+Sans&family=Zen+Old+Mincho:wght@400;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+TC:wght@300;400&family=Tenor+Sans&family=Zen+Old+Mincho:wght@400;900&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+TC:wght@300;400;600;700;900&family=Tenor+Sans&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+TC:wght@300;400;600;700;900&family=Tenor+Sans&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{--bg:#080808;--bg2:#0f0f0f;--surface:#141414;--border:#242424;--text:#e8e4dc;--text-dim:#8a8680;--text-muted:#3a3835;--gold:#c9a96e;--gold-dim:#7a6038;--white:#f5f2ed}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -93,7 +93,7 @@ nav.scrolled{background:rgba(8,8,8,.97);border-bottom:1px solid var(--border)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.98) 0%,rgba(8,8,8,.35) 50%,rgba(8,8,8,.05) 100%)}
 .hero-content{position:relative;z-index:1;max-width:680px}
 .hero-eyebrow{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;opacity:0;animation:fadeUp 1s ease .4s forwards;display:inline-block;background:rgba(0,0,0,.6);padding:.35rem .75rem;backdrop-filter:blur(4px)}
-.hero-name{font-family:'Zen Old Mincho',serif;font-size:clamp(3.5rem,9vw,7rem);font-weight:400;line-height:.95;letter-spacing:-.02em;color:var(--white);margin-bottom:.2rem;opacity:0;animation:fadeUp 1s ease .6s forwards}
+.hero-name{font-family:'Noto Serif TC',serif;font-size:clamp(3.5rem,9vw,7rem);font-weight:700;line-height:.95;letter-spacing:-.02em;color:var(--white);margin-bottom:.2rem;opacity:0;animation:fadeUp 1s ease .6s forwards}
 .hero-name-en{font-size:clamp(1rem,2.5vw,1.6rem);font-weight:300;letter-spacing:.18em;color:var(--text-dim);font-style:italic;margin-bottom:2.5rem;opacity:0;animation:fadeUp 1s ease .8s forwards}
 .hero-desc{font-size:clamp(.9rem,1.5vw,1.05rem);line-height:1.9;color:var(--text-dim);max-width:460px;opacity:0;animation:fadeUp 1s ease 1s forwards}
 .hero-award{margin-top:2.5rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp 1s ease 1.2s forwards}
@@ -113,7 +113,7 @@ section{padding:7rem 3rem}
 .divider{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
 #works{background:var(--bg)}
 .works-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem}
-.works-title{font-family:'Zen Old Mincho',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;line-height:1.1}
+.works-title{font-family:'Noto Serif TC',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.1}
 .works-title em{font-style:italic;color:var(--text-dim);display:inline;font-size:1em;letter-spacing:.05em}
 .works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .work-card{position:relative;overflow:hidden;aspect-ratio:1;background:var(--surface);cursor:none}
@@ -179,7 +179,7 @@ section{padding:7rem 3rem}
 #process{background-color:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative}
 #process::before{content:'';position:absolute;inset:0;background-image:url('bg.png');background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
 #process>*{position:relative;z-index:1}
-.process-title{font-family:'Zen Old Mincho',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;margin-bottom:1rem}
+.process-title{font-family:'Noto Serif TC',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;margin-bottom:1rem}
 .process-title em{font-style:italic;color:var(--text-dim)}
 .process-subtitle{font-size:.95rem;color:#c8c3bb;line-height:1.8;margin-bottom:4rem;max-width:560px}
 .process-scroll-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;cursor:grab;padding-bottom:2rem}
@@ -205,7 +205,7 @@ section{padding:7rem 3rem}
 .artist-photo{aspect-ratio:4/3;overflow:hidden;background:var(--surface)}
 .artist-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) grayscale(.1);transition:filter .6s}
 .artist-photo:hover img{filter:brightness(1) grayscale(0)}
-.artist-text h2{font-family:'Zen Old Mincho',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;line-height:1.15;margin-bottom:2.5rem}
+.artist-text h2{font-family:'Noto Serif TC',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.15;margin-bottom:2.5rem}
 .artist-text h2 em{font-style:italic;color:var(--text-dim);display:block;font-size:.7em}
 .artist-text p{font-size:.95rem;line-height:2;color:#c8c3bb;margin-bottom:1.25rem}
 .artist-details{margin-top:2.5rem}
@@ -229,7 +229,7 @@ section{padding:7rem 3rem}
 #collect::before{content:'';position:absolute;inset:0;background-image:url('bg.png');background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
 #collect>*{position:relative;z-index:1}
 .collect-inner{max-width:660px;margin:0 auto;text-align:center}
-.collect-inner h2{font-family:'Zen Old Mincho','Noto Serif TC',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;letter-spacing:-.02em;line-height:1.1;margin-bottom:2rem}
+.collect-inner h2{font-family:'Noto Serif TC',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:2rem}
 .collect-inner h2 em{display:block;font-style:italic;color:var(--text-dim)}
 .collect-inner p{font-size:1rem;line-height:2;color:var(--text-dim);margin-bottom:.75rem}
 .collect-note{margin:2.5rem 0;padding:1.75rem;border:1px solid var(--border);position:relative}
@@ -241,7 +241,7 @@ section{padding:7rem 3rem}
 .collect-cta:hover::after{transform:translateX(4px)}
 #contact{background:var(--bg2);border-top:1px solid var(--border)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
-.contact-left h2{font-family:'Zen Old Mincho',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;line-height:1.2;margin-bottom:1.5rem}
+.contact-left h2{font-family:'Noto Serif TC',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:1.5rem}
 .contact-left p{font-size:.95rem;line-height:2;color:var(--text-dim)}
 .contact-links{display:flex;flex-direction:column;margin-top:3.5rem}
 .contact-link{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text-dim);transition:color .3s;cursor:none}
@@ -555,9 +555,9 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2e
   <div style="border-top:1px solid var(--border);margin-top:5rem;padding-top:4rem;" class="reveal">
     <div style="max-width:680px;margin:0 auto;">
       <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="zh">人物側寫</span><span class="en">Profile</span></p>
-      <h3 style="font-family:'Zen Old Mincho',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:400;color:var(--white);margin-bottom:2.5rem;letter-spacing:.05em;"><span class="zh">葉綠娜　談羅浦堤</span><span class="en">Lina Yeh on Pu-Ti Lo</span></h3>
+      <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:600;color:var(--white);margin-bottom:2.5rem;letter-spacing:.05em;"><span class="zh">葉綠娜　談羅浦堤</span><span class="en">Lina Yeh on Pu-Ti Lo</span></h3>
       <div style="font-size:.95rem;line-height:2.2;color:#c8c3bb;position:relative;">
-        <span class="zh"><span style="font-family:'Zen Old Mincho',serif;font-size:3.5em;line-height:.8;float:left;margin-right:.1em;margin-top:.05em;color:var(--text);">認</span>識浦堤，是在某次魏樂富帶學生爬山的途中。那時他還只是個學生，留給我的第一印象，是他嚴重的過敏——聚餐時幾乎什麼都不能吃。
+        <span class="zh"><span style="font-family:'Noto Serif TC',serif;font-size:3.5em;line-height:.8;float:left;margin-right:.1em;margin-top:.05em;color:var(--text);">認</span>識浦堤，是在某次魏樂富帶學生爬山的途中。那時他還只是個學生，留給我的第一印象，是他嚴重的過敏——聚餐時幾乎什麼都不能吃。
         <p style="margin-top:1.5em;">不知道從什麼時候開始，浦堤來家裡跟魏樂富上課的時候，都會帶上自己折的作品來。一張紙折成的鋼琴、一隻鷹、傳說裡的三足金烏，還有各種他自己設計的、讓人眼花撩亂的碎形鑲嵌作品。每次看到新作品，我都覺得不可思議——不只是技術，而是他看待事物的角度。他的碩士論文用數學圖表分析鋼琴演奏中最難以量化的彈性速度——用理性的工具去逼近最感性的東西。這種思維方式，在他的折紙裡也看得到。</p>
         <p style="margin-top:1.5em;">他這些年走了一條不尋常的路。下棋、折紙、碎形幾何——很多老師可能會擔心，但我從來不擔心浦堤。一個真正知道自己在找什麼的人，不管走了多遠，都會找到路回來。</p>
         <p style="margin-top:1.5em;">他的畢業音樂會，把鑲嵌折紙燈箱搬上了北藝的音樂廳舞台。鋼琴在中央，發光的幾何結構圍繞四周。每張摺紙花了四十到五十個鐘頭，每首曲子需要同樣漫長的練習——台上呈現的，是上千鐘頭的辛勞。我在台下看著，心裡只有一個念頭：這個人，把兩個世界帶到了同一個舞台上。在畢業音樂會上，這應該是前所未有的。</p>
@@ -572,11 +572,11 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2e
       </div>
       <div style="margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid rgba(122,96,56,0.35);display:flex;flex-direction:column;gap:1.25rem;">
         <div>
-          <p style="font-family:'Zen Old Mincho',serif;font-size:.9rem;color:var(--text);margin-bottom:.3rem;"><span class="zh">葉綠娜</span><span class="en">Lina Yeh　葉綠娜</span></p>
+          <p style="font-family:'Noto Serif TC',serif;font-size:.9rem;color:var(--text);margin-bottom:.3rem;"><span class="zh">葉綠娜</span><span class="en">Lina Yeh　葉綠娜</span></p>
           <p style="font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2em;color:var(--gold-dim);line-height:1.8;"><span class="zh">鋼琴家・音樂教育家<br>國立臺灣師範大學音樂學系教授・第十五屆國家文藝獎得主</span><span class="en">Pianist · Music Educator<br>Professor, Dept. of Music, National Taiwan Normal University · 15th National Arts Award</span></p>
         </div>
         <div>
-          <p style="font-family:'Zen Old Mincho',serif;font-size:.9rem;color:var(--text);margin-bottom:.3rem;"><span class="zh">魏樂富　Rolf-Peter Wille</span><span class="en">Rolf-Peter Wille　魏樂富</span></p>
+          <p style="font-family:'Noto Serif TC',serif;font-size:.9rem;color:var(--text);margin-bottom:.3rem;"><span class="zh">魏樂富　Rolf-Peter Wille</span><span class="en">Rolf-Peter Wille　魏樂富</span></p>
           <p style="font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2em;color:var(--gold-dim);line-height:1.8;"><span class="zh">鋼琴家・作曲家・音樂評論家<br>國立臺北藝術大學音樂學系榮譽退休教授・第十五屆國家文藝獎得主</span><span class="en">Pianist · Composer · Music Critic<br>Professor Emeritus, Dept. of Music, Taipei National University of the Arts · 15th National Arts Award</span></p>
         </div>
       </div>
