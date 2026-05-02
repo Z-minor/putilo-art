@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>羅浦堤 Pu-Ti Lo｜折紙藝術家 · 鋼琴演奏家</title>
+<meta name="description" content="羅浦堤（Pu-Ti Lo）——台灣當代折紙藝術家與鋼琴演奏家。以原創碎形幾何鑲嵌為核心創作語言，榮獲2025年喬賽爾獎（Joisel Award）三項大獎。作品面向國際收藏市場，接受委託製作。">
+<meta name="keywords" content="羅浦堤, Pu-Ti Lo, 折紙藝術家, 鑲嵌折紙, 碎形幾何, origami artist, tessellation, fractal origami, Joisel Award, 喬賽爾獎, 台灣藝術家">
+<meta name="author" content="羅浦堤 Pu-Ti Lo">
+<link rel="canonical" href="https://putilo.art">
+<meta property="og:title" content="羅浦堤 Pu-Ti Lo｜折紙藝術家 · 鋼琴演奏家">
+<meta property="og:description" content="台灣當代折紙藝術家。以碎形幾何鑲嵌折紙為核心，榮獲2025年喬賽爾獎三項大獎。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://putilo.art">
+<meta property="og:image" content="dreamlike-ephemera.jpg">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="羅浦堤 Pu-Ti Lo｜折紙藝術家">
+<meta name="twitter:description" content="台灣當代折紙藝術家。碎形幾何鑲嵌。2025年喬賽爾獎三項大獎得主。">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"羅浦堤","alternateName":"Pu-Ti Lo","url":"https://putilo.art","jobTitle":["折紙藝術家","鋼琴演奏家","Origami Artist","Pianist"],"nationality":"Taiwan","award":"2025 Joisel Award — Abstract Technical First Place, Popular Vote Award, Abstract Interpretation Second Place","alumniOf":{"@type":"CollegeOrUniversity","name":"國立臺北藝術大學","alternateName":"Taipei National University of the Arts"},"sameAs":["https://www.instagram.com/tessellation_origami_on_train"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+TC:wght@300;400&family=Tenor+Sans&family=Zen+Old+Mincho:wght@400;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080808;--bg2:#0f0f0f;--surface:#141414;--border:#242424;--text:#e8e4dc;--text-dim:#8a8680;--text-muted:#3a3835;--gold:#c9a96e;--gold-dim:#7a6038;--white:#f5f2ed}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond','Noto Serif TC',serif;font-weight:300;overflow-x:hidden;cursor:none}
+.cursor{position:fixed;width:6px;height:6px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s}
+.cursor-ring{position:fixed;width:28px;height:28px;border:1px solid var(--gold-dim);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.75rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s,border-bottom .4s}
+nav::after{content:'';position:absolute;inset:0;top:-0px;height:120px;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,transparent 100%);pointer-events:none;z-index:-1;transition:opacity .4s}
+nav.scrolled::after{opacity:0}
+nav.scrolled{background:rgba(8,8,8,.97);border-bottom:1px solid var(--border)}
+.nav-name{font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text);text-decoration:none;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-links a{font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--text);text-decoration:none;transition:color .3s;cursor:none;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.nav-links a:hover{color:var(--gold)}
+.lang-btn{font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text);background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.25);padding:.3rem .65rem;cursor:none;transition:all .3s;backdrop-filter:blur(4px)}
+.lang-btn:hover{color:var(--gold);border-color:var(--gold-dim)}
+.hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:0 3rem 5rem}
+.hero-bg{position:absolute;inset:0;background-image:url('hero-bg.jpg');background-size:cover;background-position:center center;filter:brightness(.98);transform:scale(1.05);transition:transform 8s ease}
+.hero-bg.loaded{transform:scale(1)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.98) 0%,rgba(8,8,8,.35) 50%,rgba(8,8,8,.05) 100%)}
+.hero-content{position:relative;z-index:1;max-width:680px}
+.hero-eyebrow{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;opacity:0;animation:fadeUp 1s ease .4s forwards;display:inline-block;background:rgba(0,0,0,.6);padding:.35rem .75rem;backdrop-filter:blur(4px)}
+.hero-name{font-family:'Zen Old Mincho',serif;font-size:clamp(3.5rem,9vw,7rem);font-weight:400;line-height:.95;letter-spacing:-.02em;color:var(--white);margin-bottom:.2rem;opacity:0;animation:fadeUp 1s ease .6s forwards}
+.hero-name-en{font-size:clamp(1rem,2.5vw,1.6rem);font-weight:300;letter-spacing:.18em;color:var(--text-dim);font-style:italic;margin-bottom:2.5rem;opacity:0;animation:fadeUp 1s ease .8s forwards}
+.hero-desc{font-size:clamp(.9rem,1.5vw,1.05rem);line-height:1.9;color:var(--text-dim);max-width:460px;opacity:0;animation:fadeUp 1s ease 1s forwards}
+.hero-award{margin-top:2.5rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp 1s ease 1.2s forwards}
+.award-line{width:36px;height:1px;background:var(--gold-dim)}
+.award-text{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);background:rgba(0,0,0,.6);padding:.35rem .75rem;backdrop-filter:blur(4px)}
+.hero-scroll{position:absolute;right:3rem;bottom:5rem;display:flex;flex-direction:column;align-items:center;gap:.75rem;opacity:0;animation:fadeIn 1s ease 1.8s forwards}
+.hero-scroll span{font-family:'Tenor Sans',sans-serif;font-size:.52rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);writing-mode:vertical-rl}
+.scroll-bar{width:1px;height:56px;background:linear-gradient(to bottom,var(--gold-dim),transparent);animation:pulse 2s ease infinite}
+section{padding:7rem 3rem}
+.section-tag{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:3.5rem;display:flex;align-items:center;gap:1.5rem}
+.section-tag::after{content:'';flex:1;max-width:100px;height:1px;background:var(--border)}
+.section-tag.no-line::after{display:none}
+.dot-em .dc{display:inline-block;position:relative}
+.dot-em .dc::after{content:'';position:absolute;bottom:var(--dot-bottom, 0px);left:50%;transform:translateX(-50%);width:var(--dot-size, 3px);height:var(--dot-size, 3px);border-radius:50%;background:var(--gold)}
+.marker{background:linear-gradient(transparent 55%, rgba(201,169,110,0.35) 55%);}
+.underline-gold{border-bottom:1px solid var(--gold-dim);padding-bottom:1px;}
+.divider{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+#works{background:var(--bg)}
+.works-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem}
+.works-title{font-family:'Zen Old Mincho',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;line-height:1.1}
+.works-title em{font-style:italic;color:var(--text-dim);display:inline;font-size:1em;letter-spacing:.05em}
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.work-card{position:relative;overflow:hidden;aspect-ratio:1;background:var(--surface);cursor:none}
+.work-card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.25,.46,.45,.94),filter .6s;filter:brightness(.92) saturate(.95)}
+.work-card:hover img{transform:scale(1.05);filter:brightness(1) saturate(1)}
+.work-info{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.88) 0%,transparent 50%);opacity:0;transition:opacity .5s;display:flex;align-items:flex-end;padding:1.75rem}
+.work-card:hover .work-info{opacity:1}
+@media(hover:none){
+  .work-card img{filter:brightness(1) saturate(1)}
+  .work-info{opacity:1}
+}
+.work-title-text{font-size:1rem;font-weight:300;color:var(--white);margin-bottom:.2rem}
+.work-meta-text{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+.work-award-badge{position:absolute;top:1.25rem;left:1.25rem;font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);padding:.25rem .6rem;background:rgba(8,8,8,.8)}
+.work-poem{background:var(--surface);padding:2.5rem 1.75rem;display:flex;align-items:center;justify-content:center;overflow-y:auto;aspect-ratio:unset}
+.poem-title{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem;font-style:normal}
+.poem-text{font-size:.82rem;line-height:2.2;color:var(--text-dim);font-style:italic;text-align:center;letter-spacing:.05em}
+
+
+.texture-bg{
+  background-image:url('bg.png');
+  background-repeat:repeat;
+  background-size:300px 300px;
+  background-blend-mode:overlay;
+}
+
+.pull-quote{
+  position:relative;
+  margin:0;
+  padding:1.5rem 1.5rem 1.5rem 2rem;
+  border-left:1px solid var(--gold-dim);
+  background:rgba(201,169,110,0.04);
+  max-width:220px;
+}
+.pull-quote::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:1px;height:2rem;
+  background:var(--gold);
+}
+.pull-quote-text{
+  font-size:.78rem;
+  line-height:2;
+  color:var(--text-dim);
+  font-style:italic;
+  letter-spacing:.03em;
+}
+.pull-quote-source{
+  display:block;
+  margin-top:.75rem;
+  font-family:'Tenor Sans',sans-serif;
+  font-size:.5rem;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:var(--gold-dim);
+}
+
+
+.texture-overlay{position:absolute;inset:0;pointer-events:none;z-index:0}
+#process{background-color:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative}
+#process::before{content:'';position:absolute;inset:0;background-image:url('bg.png');background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
+#process>*{position:relative;z-index:1}
+.process-title{font-family:'Zen Old Mincho',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;margin-bottom:1rem}
+.process-title em{font-style:italic;color:var(--text-dim)}
+.process-subtitle{font-size:.95rem;color:#c8c3bb;line-height:1.8;margin-bottom:4rem;max-width:560px}
+.process-scroll-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;cursor:grab;padding-bottom:2rem}
+.process-scroll-wrapper:active{cursor:grabbing}
+.process-scroll-wrapper::-webkit-scrollbar{height:1px}
+.process-scroll-wrapper::-webkit-scrollbar-track{background:var(--border)}
+.process-scroll-wrapper::-webkit-scrollbar-thumb{background:var(--gold-dim)}
+.process-track{display:flex;align-items:center;gap:0;padding:2rem 0;width:max-content}
+.process-node{display:flex;flex-direction:column;align-items:center;width:260px;flex-shrink:0}
+.node-photo{width:180px;height:180px;border-radius:50%;overflow:hidden;border:1px solid var(--border);position:relative;cursor:none;transition:border-color .4s,transform .4s;transform:translateZ(0);-webkit-mask-image:-webkit-radial-gradient(white,black)}
+.node-photo:hover{border-color:var(--gold-dim);transform:scale(1.04)}
+.node-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.8);transition:filter .4s;border-radius:50%;display:block}
+.node-photo:hover img{filter:brightness(1)}
+.node-number{font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.2em;color:var(--gold);margin-bottom:.4rem;display:block}
+.node-label{margin-top:1.25rem;text-align:center}
+.node-step{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;line-height:2}
+.node-desc{font-size:.85rem;color:var(--text-dim);line-height:1.7;text-align:center;max-width:200px}
+.process-connector{width:80px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;margin-top:-60px}
+.connector-line{width:100%;height:1px;background:none;border-top:1px dashed var(--gold-dim);position:relative}
+.connector-arrow{position:absolute;right:-4px;top:-4px;width:8px;height:8px;border-right:1px solid var(--gold-dim);border-top:1px solid var(--gold-dim);transform:rotate(45deg)}
+#artist{background:var(--bg)}
+.artist-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.artist-photo{aspect-ratio:4/3;overflow:hidden;background:var(--surface)}
+.artist-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) grayscale(.1);transition:filter .6s}
+.artist-photo:hover img{filter:brightness(1) grayscale(0)}
+.artist-text h2{font-family:'Zen Old Mincho',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;line-height:1.15;margin-bottom:2.5rem}
+.artist-text h2 em{font-style:italic;color:var(--text-dim);display:block;font-size:.7em}
+.artist-text p{font-size:.95rem;line-height:2;color:#c8c3bb;margin-bottom:1.25rem}
+.artist-details{margin-top:2.5rem}
+.detail-row{padding:1.5rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:100px 1fr;gap:1.5rem;align-items:baseline}
+.detail-row:first-child{border-top:1px solid var(--border)}
+.detail-key{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim)}
+.detail-val{font-size:.9rem;color:var(--text-dim);line-height:1.7}
+.detail-val strong{color:var(--text);font-weight:400}
+.detail-val .gold{color:var(--gold)}
+#media{background:var(--bg2);border-top:1px solid var(--border)}
+.media-list{display:flex;flex-direction:column}
+.media-item{display:flex;align-items:center;justify-content:space-between;padding:1.75rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text-dim);transition:color .3s;cursor:none}
+.media-item:first-child{border-top:1px solid var(--border)}
+.media-item:hover{color:var(--white)}
+.media-item:hover .media-arrow{transform:translateX(6px);color:var(--gold)}
+.media-source{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-dim);min-width:160px}
+.media-title{font-size:1rem;flex:1;margin:0 2rem}
+.media-date{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.15em;color:var(--gold-dim)}
+.media-arrow{color:var(--gold-dim);transition:transform .3s,color .3s;margin-left:1rem}
+#collect{background:var(--bg);position:relative}
+#collect::before{content:'';position:absolute;inset:0;background-image:url('bg.png');background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
+#collect>*{position:relative;z-index:1}
+.collect-inner{max-width:660px;margin:0 auto;text-align:center}
+.collect-inner h2{font-family:'Zen Old Mincho',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;letter-spacing:-.02em;line-height:1.1;margin-bottom:2rem}
+.collect-inner h2 em{display:block;font-style:italic;color:var(--text-dim)}
+.collect-inner p{font-size:1rem;line-height:2;color:var(--text-dim);margin-bottom:.75rem}
+.collect-note{margin:2.5rem 0;padding:1.75rem;border:1px solid var(--border);position:relative}
+.collect-note::before{content:'';position:absolute;top:-1px;left:2rem;width:2.5rem;height:1px;background:var(--gold)}
+.collect-note p{font-size:.85rem;color:var(--text-dim);margin:0}
+.collect-cta{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.5rem;padding:1rem 2.25rem;border:1px solid var(--gold-dim);color:var(--gold);text-decoration:none;font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;transition:all .4s;cursor:none}
+.collect-cta:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.collect-cta::after{content:'→';transition:transform .3s}
+.collect-cta:hover::after{transform:translateX(4px)}
+#contact{background:var(--bg2);border-top:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
+.contact-left h2{font-family:'Zen Old Mincho',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;line-height:1.2;margin-bottom:1.5rem}
+.contact-left p{font-size:.95rem;line-height:2;color:var(--text-dim)}
+.contact-links{display:flex;flex-direction:column;margin-top:3.5rem}
+.contact-link{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text-dim);transition:color .3s;cursor:none}
+.contact-link:first-child{border-top:1px solid var(--border)}
+.contact-link:hover{color:var(--white)}
+.contact-link:hover .link-arrow{transform:translateX(4px);color:var(--gold)}
+.link-label{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim)}
+.link-val{font-size:.9rem}
+.link-arrow{color:var(--gold-dim);transition:transform .3s,color .3s}
+footer{padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border)}
+footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
+.zh{display:block}.en{display:none}
+@media(max-width:768px){
+  nav{padding:1.25rem 1.5rem}
+  section{padding:5rem 1.5rem}
+  .hero{padding:0 1.5rem 4rem}
+  .hero-scroll{display:none}
+  .works-grid{grid-template-columns:1fr}
+  .work-poem{padding:2rem 1.5rem}
+  .work-card.wide{grid-column:span 1;aspect-ratio:1}
+  .artist-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .artist-photo{aspect-ratio:4/3}
+  .media-item{flex-wrap:wrap;gap:.5rem}
+  .media-title{margin:0;flex-basis:100%}
+  footer{flex-direction:column;gap:1rem;text-align:center}
+  .nav-links{gap:1.5rem}
+  .process-node{width:200px}
+  .node-photo{width:140px;height:140px}
+  .ig-section{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="nav">
+  <a href="#" class="nav-name">羅浦堤</a>
+  <div class="nav-links">
+    <a href="#works" data-zh="作品" data-en="Works">作品</a>
+    <a href="#process" data-zh="創作過程" data-en="Process">創作過程</a>
+    <a href="#artist" data-zh="關於" data-en="About">關於</a>
+    <a href="#exhibitions" data-zh="展演" data-en="Exhibitions">展演</a>
+    <a href="#collect" data-zh="收藏" data-en="Collect">收藏</a>
+    <a href="#contact" data-zh="聯繫" data-en="Contact">聯繫</a>
+    <button class="lang-btn" id="langBtn">EN</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" data-zh="折紙藝術家　·　鋼琴演奏家" data-en="Origami Artist　·　Pianist">折紙藝術家　·　鋼琴演奏家</div>
+    <h1 class="hero-name" data-zh="羅浦堤" data-en="Pu-Ti Lo">羅浦堤</h1>
+    <div class="hero-name-en" data-zh="Pu-Ti Lo" data-en="羅浦堤">Pu-Ti Lo</div>
+    <p class="hero-desc">
+      <span class="zh">數學的精密，音樂的呼吸。<br>以一張紙，折出無限內縮的宇宙結構。</span>
+      <span class="en">The precision of mathematics, the breath of music.<br>From a single sheet — structures that spiral inward without end.</span>
+    </p>
+    <div class="hero-award">
+      <div class="award-line"></div>
+      <span class="award-text" data-zh="2025 Joisel Award　抽象技術組首獎　·　最佳觀眾人氣獎　·　抽象詮釋組亞軍" data-en="2025 Joisel Award — Abstract Technical 1st · Popular Vote · Abstract Interpretation 2nd">2025 Joisel Award　抽象技術組首獎　·　最佳觀眾人氣獎　·　抽象詮釋組亞軍</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    <span data-zh="向下" data-en="Scroll">向下</span>
+  </div>
+</section>
+
+<section id="works">
+  <div class="section-tag reveal" data-zh="精選作品" data-en="Selected Works">精選作品</div>
+  <div class="works-intro">
+    <h2 class="works-title reveal reveal-d1">
+      <span data-zh="當碎形" data-en="When fractals">當碎形</span>
+      <em data-zh='在紙上<span class="dot-em" style="color:var(--gold)"><span class="dc" style="--dot-size:5px;--dot-bottom:-8px">綻</span><span class="dc" style="--dot-size:5px;--dot-bottom:-8px">放</span></span>' data-en='bloom in <span class="marker">paper</span>'>在紙上<span class="dot-em" style="color:var(--gold)"><span class="dc" style="--dot-size:5px;--dot-bottom:-8px">綻</span><span class="dc" style="--dot-size:5px;--dot-bottom:-8px">放</span></span></em>
+    </h2>
+  </div>
+  <div class="works-grid">
+    <div class="work-card reveal">
+      <img src="dreamlike-ephemera.jpg" alt="夢幻泡影 Dreamlike Ephemera — 羅浦堤 Pu-Ti Lo origami tessellation">
+      <div class="work-award-badge">1ST PLACE · POPULAR VOTE — 2025 Joisel Award</div>
+      <div class="work-info">
+        <div>
+          <div class="work-title-text" data-zh="夢幻泡影　Dreamlike Ephemera" data-en="Dreamlike Ephemera　夢幻泡影">夢幻泡影　Dreamlike Ephemera</div>
+          <div class="work-meta-text" data-zh="雙重遞迴結構　·　抽象技術組首獎 · 最佳觀眾人氣獎" data-en="Double-Recursive Structure · Abstract Technical 1st Place · Popular Vote">雙重遞迴結構　·　抽象技術組首獎 · 最佳觀眾人氣獎</div>
+        </div>
+      </div>
+    </div>
+<div class="work-card reveal reveal-d1">
+      <img src="prototype-of-wings.jpg" alt="翼之原型 Prototype of Wings origami — 羅浦堤 Pu-Ti Lo">
+      <div class="work-info">
+        <div>
+          <div class="work-title-text" data-zh="翼之原型　Prototype of Wings" data-en="Prototype of Wings　翼之原型">翼之原型　Prototype of Wings</div>
+          <div class="work-meta-text" data-zh="遞迴結構　背光" data-en="Recursive Structure · Backlit">遞迴結構　背光</div>
+        </div>
+      </div>
+    </div>
+<div class="work-card reveal reveal-d2">
+      <img src="metarecursion-2.jpg" alt="超遞迴 #2 Metarecursion #2 origami — 羅浦堤 Pu-Ti Lo">
+      <div class="work-info">
+        <div>
+          <div class="work-title-text" data-zh="超遞迴 #2　Metarecursion #2" data-en="Metarecursion #2　超遞迴 #2">超遞迴 #2　Metarecursion #2</div>
+          <div class="work-meta-text" data-zh="碎形結構" data-en="Fractal Structure">碎形結構</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:4rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:0;">
+    <div style="overflow:hidden;">
+      <img src="ig-grid.jpg" alt="羅浦堤 Pu-Ti Lo 折紙作品集 origami works" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease;" onmouseenter="this.style.transform='scale(1.03)'" onmouseleave="this.style.transform='scale(1)'">
+    </div>
+    <div style="padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border);">
+      <p style="font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;">
+        <span class="zh">創作理念</span><span class="en">Artistic Principle</span>
+      </p>
+      <p style="font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.9;color:#c8c3bb;margin-bottom:2.5rem;">
+        <span class="zh">所有作品均為羅浦堤原創設計，以一張完整的紙親手折制，<span class="marker">不剪不黏</span>。目前已發展逾五十個獨立原創結構。</span>
+        <span class="en">All works are original designs by Pu-Ti Lo, folded by hand from a single <span class="marker">uncut, unglued</span> sheet of paper. Over fifty independent original structures have been developed to date.</span>
+      </p>
+      <a href="https://instagram.com/tessellation_origami_on_train" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:1rem;padding:1.3rem 3rem;background:var(--gold);border:1px solid var(--gold);color:var(--bg);text-decoration:none;font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;transition:all .4s;cursor:none;align-self:flex-start;" onmouseenter="this.style.background='transparent';this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseleave="this.style.background='var(--gold)';this.style.color='var(--bg)';this.style.borderColor='var(--gold)'">
+        <span class="zh">在 Instagram 查看更多作品</span>
+        <span class="en">View More Works on Instagram</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="process" class="texture-bg">
+  <div class="texture-overlay"></div>
+  <div class="section-tag reveal" data-zh="創作過程" data-en="The Process">創作過程</div>
+  <h2 class="process-title reveal reveal-d1">
+    <span data-zh="腦海中的形意" data-en="A form held in the mind">腦海中的形意</span>
+    <em data-zh='以折痕<span style="color:var(--gold)">賦生</span>' data-en='given life through the <span style="color:var(--gold)">crease</span>'>以折痕<span style="color:var(--gold)">賦生</span></em>
+  </h2>
+  <p class="process-subtitle reveal reveal-d2">
+    <span class="zh">每件作品的誕生，是一段從電腦螢幕到地板、從數學邏輯到手指觸感的漫長旅程。每個步驟動輒<span class="marker">數十小時</span>。</span>
+    <span class="en">Each work is a long journey from screen to floor, from mathematical logic to the touch of fingertips. Every step demands <span class="marker">tens of hours</span>.</span>
+  </p>
+  <div class="process-scroll-wrapper reveal reveal-d3" id="processWrapper">
+    <div class="process-track">
+      <div class="process-node">
+        <div class="node-photo">
+          <img src="process-1-modeling.png" alt="電腦建模 digital modeling origami">
+        </div>
+        <div class="node-label">
+          <div class="node-step" data-zh="01　電腦建模" data-en="01　Digital Modeling">01　電腦建模</div>
+          <div class="node-desc">
+            <span class="zh">設計碎形幾何結構<br>確認折線數學關係</span>
+            <span class="en">Designing the fractal structure<br>Verifying crease mathematics</span>
+          </div>
+        </div>
+      </div>
+      <div class="process-connector"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+      <div class="process-node">
+        <div class="node-photo">
+          <img src="process-2-paper.jpg" alt="選紙 paper selection origami">
+        </div>
+        <div class="node-label">
+          <div class="node-step" data-zh="02　選紙 · 染紙" data-en="02　Paper Selection">02　選紙 · 染紙</div>
+          <div class="node-desc">
+            <span class="zh">選擇或自製紙材<br>有時手工染色</span>
+            <span class="en">Selecting or fabricating paper<br>Sometimes hand-dyeing</span>
+          </div>
+        </div>
+      </div>
+      <div class="process-connector"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+      <div class="process-node">
+        <div class="node-photo">
+          <img src="process-3-creasing.jpg" alt="預打折線 pre-creasing origami">
+        </div>
+        <div class="node-label">
+          <div class="node-step" data-zh="03　預打折線<br>Pre-crease" data-en="03　Pre-crease<br>預打折線">03　預打折線<br>Pre-crease</div>
+          <div class="node-desc">
+            <span class="zh">在整張紙壓出所有折痕<br>每條線必須精準</span>
+            <span class="en">Pre-creasing all fold lines<br>Every crease must be exact</span>
+          </div>
+        </div>
+      </div>
+      <div class="process-connector"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+      <div class="process-node">
+        <div class="node-photo">
+          <img src="process-4-collapse.jpg" alt="聚合 collapse origami tessellation">
+        </div>
+        <div class="node-label">
+          <div class="node-step" data-zh="04　聚合<br>Collapse" data-en="04　Collapse<br>聚合">04　聚合<br>Collapse</div>
+          <div class="node-desc">
+            <span class="zh">將折痕同時收合<br>平面轉化為立體</span>
+            <span class="en">Gathering all creases<br>Flat becomes three-dimensional</span>
+          </div>
+        </div>
+      </div>
+      <div class="process-connector"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+      <div class="process-node">
+        <div class="node-photo">
+          <img src="process-5-complete.jpg" alt="完成作品 completed origami tessellation backlit">
+        </div>
+        <div class="node-label">
+          <div class="node-step" data-zh="05　完成作品" data-en="05　Completed Work">05　完成作品</div>
+          <div class="node-desc">
+            <span class="zh">數十小時後，結構完整呈現<br>背光時層次才完全顯現</span>
+            <span class="en">After tens of hours<br>Backlit, the full depth emerges</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="artist">
+  <div class="section-tag reveal" data-zh="關於藝術家" data-en="About the Artist">關於藝術家</div>
+  <div class="artist-grid" style="grid-template-columns:5fr 6fr 200px;gap:4rem;">
+    <div style="display:flex;flex-direction:column;gap:2px;">
+      <div class="artist-photo reveal">
+        <img src="artist.jpg" alt="羅浦堤 Pu-Ti Lo 折紙藝術家 origami artist Taiwan">
+      </div>
+      <div style="position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--surface);" class="reveal">
+        <img src="piano.jpg" alt="折紙鋼琴 origami piano Pu-Ti Lo" style="width:100%;height:100%;object-fit:cover;filter:brightness(.9);transition:filter .6s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(.9)'">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem 1.25rem;background:linear-gradient(transparent,rgba(8,8,8,.75));">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.2rem;"><span class="zh">《直立式鋼琴》</span><span class="en">Upright Piano</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.5;"><span class="zh">本人設計與折制的折紙鋼琴，具完整黑白鍵結構。</span><span class="en">An origami piano of original design, with complete black and white keys.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="artist-text">
+      <h2 class="reveal">
+        <span data-zh="音樂 × 折紙" data-en="Music × Origami">音樂 × 折紙</span>
+        <em data-zh='他在兩個世界中看見<span style="color:var(--gold)">殊途同歸</span>' data-en='Two paths, <span style="color:var(--gold)">one destination</span>'>他在兩個世界中看見<span style="color:var(--gold)">殊途同歸</span></em>
+      </h2>
+      <p class="reveal reveal-d1">
+        <span class="zh">西方古典音樂的根基只有十二個音；折紙的世界只有山線、谷線與三大公理。極度有限的元素，卻能生成<span class="dot-em" style="font-weight:700"><span class="dc">無</span><span class="dc">遠</span><span class="dc">弗</span><span class="dc">屆</span></span>的可能性。他在這兩個世界裡看到同一件事：<span class="marker">最高級的自洽，能包容自身的複雜性。</span></span>
+        <span class="en">Western classical music is built on twelve notes. Origami on mountain folds, valley folds, and three axioms. Radically finite elements — and yet <span class="marker">infinite possibility</span>. In both worlds he sees the same truth: <span class="marker">the highest form of coherence can hold its own complexity.</span></span>
+      </p>
+      <p class="reveal reveal-d2">
+        <span class="zh">他偏愛音樂裡最<span class="marker">感性</span>、詮釋空間最大的作品；他的折紙，卻是最<span class="marker">理性</span>的東西——碎形、幾何、數學邏輯精密到極致的結構。他相信，這不是矛盾，而是<span class="marker">從兩個相反的方向逼近同一件事。</span></span>
+        <span class="en">He is drawn to the most <span class="marker">emotionally open</span> music — yet his origami is the most <span class="marker">rational</span> of things: fractal, geometric, mathematical logic at its limit. He believes this is not contradiction, but <span class="marker">two paths approaching the same destination from opposite directions.</span></span>
+      </p>
+      <div class="artist-details reveal reveal-d3">
+        <div class="detail-row">
+          <span class="detail-key" data-zh="身份" data-en="Practice">身份</span>
+          <span class="detail-val"><strong data-zh="當代折紙藝術家" data-en="Contemporary Origami Artist">當代折紙藝術家</strong><br><span data-zh="鋼琴演奏家" data-en="Pianist">鋼琴演奏家</span></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key" data-zh="學歷" data-en="Education">學歷</span>
+          <span class="detail-val" data-zh="鋼琴演奏碩士　國立臺北藝術大學" data-en="M.Mus. Piano Performance, Taipei National University of the Arts">鋼琴演奏碩士　國立臺北藝術大學</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key" data-zh="媒材" data-en="Medium">媒材</span>
+          <span class="detail-val" data-zh="原創碎形鑲嵌折紙結構" data-en="Original Fractal Tessellation Origami Structure">原創碎形鑲嵌折紙結構</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key" data-zh="所在地" data-en="Based">所在地</span>
+          <span class="detail-val" data-zh="台灣" data-en="Taiwan">台灣</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key" data-zh="獎項" data-en="Awards">獎項</span>
+          <span class="detail-val">
+            <span class="gold">2025 Joisel Award</span><br>
+            <span data-zh="抽象技術組　首獎" data-en="Abstract Technical — First Place">抽象技術組　首獎</span><br>
+            <span data-zh="抽象技術組　最佳觀眾人氣獎" data-en="Popular Vote Award">抽象技術組　最佳觀眾人氣獎</span><br>
+            <span data-zh="抽象詮釋組　第二名" data-en="Abstract Interpretation — Second Place">抽象詮釋組　第二名</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top:0;display:flex;flex-direction:column;gap:3rem;">
+      <div class="pull-quote reveal">
+        <p class="pull-quote-text">紙　本是自由的<br>白　本是未定義的<br><br>折紙人想在紙上造夢<br>卻得先讓夢的疊加態坍縮<br>刪去所有其餘只餘唯一<br><br><br>然而相變的　不能靜如白紙<br><br>紙上擾動的混沌<br>是秩序散逸時回首的浪花<br><br>還是尚未但將要成型的意義<br>在沸騰前顫抖的狂喜？</p>
+        <span class="pull-quote-source">《夢幻泡影》</span>
+      </div>
+      <div class="pull-quote reveal reveal-d2">
+        <p class="pull-quote-text">三大折紙公理見證<br>我以山谷線親手羅織<br>癡迷鑲嵌的罪之經緯<br><br>一紙蒼白判書上<br>條條苦行的痕<br>不是禁錮的牢籠<br><br>那是碎形的夢<br>破繭前夕的縫<br><br>晨昏顛倒　沒日沒夜<br>癡狂的答辯莫須有<br><br>數罪併罰<br>判<br>一夜強制無眠</p>
+        <span class="pull-quote-source">《折翼》</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="exhibitions" style="background:var(--bg2);border-top:1px solid var(--border);">
+  <div class="section-tag reveal" data-zh="展演記錄" data-en="Exhibitions & Performances">展演記錄</div>
+
+  <div style="position:relative;">
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;cursor:grab;padding-bottom:2rem;" id="exhibWrapper">
+    <div style="display:flex;gap:2px;width:max-content;" id="exhibTrack">
+
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="stage.jpg" alt="聲之形 畢業鋼琴獨奏會" style="width:100%;height:100%;object-fit:cover;filter:brightness(.85);">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.06.04</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">聲之形</span><span class="en">The Form of Sound</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">畢業鋼琴獨奏會 × 鑲嵌折紙燈光秀<br>台北藝術大學音樂廳</span><span class="en">Graduate Piano Recital × Origami Light Installation<br>TNUA Concert Hall, Taipei</span></p>
+        </div>
+      </div>
+
+      <div style="width:220px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;height:200px;background:#050505;display:flex;align-items:center;justify-content:center;">
+          <img src="poster.jpg" alt="聲之形 音樂會海報" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.06.04</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">聲之形　海報</span><span class="en">The Form of Sound — Poster</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">海報背景均由折紙作品構成</span><span class="en">Poster artwork composed of original origami pieces</span></p>
+        </div>
+      </div>
+
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-1.jpg" alt="2025濮院折紙展會" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">展覽現場</span><span class="en">Exhibition hall</span></p>
+        </div>
+      </div>
+
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-2.jpg" alt="2025濮院折紙展會 夜景" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">展館外牆夜景</span><span class="en">Venue exterior at night</span></p>
+        </div>
+      </div>
+
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-3.jpg" alt="2025濮院折紙展會 交流" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">藝術家交流現場</span><span class="en">Artist exchange</span></p>
+        </div>
+      </div>
+
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-4.jpg" alt="2025濮院折紙展會 Origami Convention" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">藝術家與主辦方合影</span><span class="en">Artist with the convention organizers</span></p>
+        </div>
+      </div>
+
+      <div style="width:220px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;height:200px;background:#050505;display:flex;align-items:center;justify-content:center;">
+          <img src="joisel-award-2025.jpg" alt="2025 Joisel Award 三項大獎 得獎截圖" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2026.04.27</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;">2025 Joisel Award</p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">三項大獎得獎公告<br>抽象技術首獎・人氣獎・抽象詮釋第二名</span><span class="en">Three-award announcement<br>Abstract Technical 1st · Popular Vote · Abstract Interpretation 2nd</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <div id="exhibFade" style="position:absolute;top:0;right:0;width:120px;height:100%;background:linear-gradient(to right,transparent,var(--bg2));pointer-events:none;z-index:2;transition:opacity .4s;"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="media">
+  <div class="section-tag reveal" data-zh="媒體報導" data-en="Press">媒體報導</div>
+  <div class="media-list">
+    <a href="https://cfcorigami.com/2025-award-winners" target="_blank" rel="noopener" class="media-item reveal">
+      <span class="media-source">CFC Origami　官方</span>
+      <span class="media-title" data-zh="2025 Joisel Award 得獎名單　羅浦堤獲三項大獎" data-en="2025 Joisel Award Winners — Pu-Ti Lo, Three Awards">2025 Joisel Award 得獎名單　羅浦堤獲三項大獎</span>
+      <span class="media-date">2026.04.27</span>
+      <span class="media-arrow">→</span>
+    </a>
+    <a href="https://www.rti.org.tw/news?uid=3&pid=206111" target="_blank" rel="noopener" class="media-item reveal reveal-d1">
+      <span class="media-source">RTI 中央廣播電台</span>
+      <span class="media-title" data-zh="從鋼琴到折紙　羅浦堤橫掃「折紙界奧斯卡」三大獎" data-en="From Piano to Origami — Pu-Ti Lo Sweeps Three Awards at the 'Oscars of Origami'">從鋼琴到折紙　羅浦堤橫掃「折紙界奧斯卡」三大獎</span>
+      <span class="media-date">2026.05.01</span>
+      <span class="media-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="collect" class="texture-bg">
+  <div class="collect-inner">
+    <div class="section-tag no-line reveal" style="justify-content:center;" data-zh="收藏作品" data-en="Collect a Work">收藏作品</div>
+    <h2 class="reveal"><span data-zh="每件作品" data-en="Every work">每件作品</span><em data-zh='皆為<span style="color:var(--gold)">唯一</span>' data-en='is <span style="color:var(--gold)">singular</span>'>皆為<span style="color:var(--gold)">唯一</span></em></h2>
+    <p class="reveal reveal-d1"><span class="zh">所有作品均為<strong>原創設計</strong>、<strong>親手折疊</strong>，<strong>限量</strong>或<span class="dot-em" style="font-weight:700"><span class="dc">唯</span><span class="dc">一</span><span class="dc">件</span></span>。</span><span class="en">All works are original designs, hand-folded by the artist. Each piece is produced in limited edition or as a <span class="marker">unique work</span>.</span></p>
+    <p class="reveal reveal-d2"><span class="zh">接受<strong style="color:var(--text)">客製化委託</strong>——紙張顏色、材質可依空間需求調整。製作週期約六至十週。</span><span class="en">We welcome <strong style="color:var(--text)">bespoke commissions</strong> — paper color and material may be tailored to your space. Production time is approximately six to ten weeks.</span></p>
+    <div class="collect-note reveal reveal-d3"><p><span class="zh">作品價格依尺寸與複雜度議定。歡迎來信洽詢收藏或委託事宜。</span><span class="en">Pricing varies according to scale and complexity. Enquiries regarding acquisition or commission are warmly welcomed.</span></p></div>
+    <a href="#contact" class="collect-cta reveal reveal-d4"><span data-zh="詢問收藏" data-en="Enquire">詢問收藏</span></a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="section-tag reveal" data-zh="聯繫" data-en="Contact">聯繫</div>
+      <h2 class="reveal" data-zh="讓我們開始一段對話" data-en="Begin a conversation">讓我們開始一段對話</h2>
+      <p class="reveal reveal-d1"><span class="zh">無論是收藏洽詢、委託製作、展覽合作、演講教學或媒體採訪，歡迎以下列方式與我聯繫。</span><span class="en">For collection enquiries, commissions, exhibition proposals, lectures, workshops, or press — I welcome your message.</span></p>
+    </div>
+    <div class="contact-links reveal reveal-d2">
+      <a href="mailto:contact@putilo.art" class="contact-link">
+        <div><div class="link-label" data-zh="電子郵件" data-en="Email">電子郵件</div><div class="link-val">contact@putilo.art</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://instagram.com/tessellation_origami_on_train" target="_blank" rel="noopener" class="contact-link">
+        <div><div class="link-label">Instagram</div><div class="link-val">@tessellation_origami_on_train</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="mailto:contact@putilo.art" class="contact-link">
+        <div><div class="link-label" data-zh="媒體與合作" data-en="Press & Collaboration">媒體與合作</div><div class="link-val">contact@putilo.art</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p data-zh="© 2026 羅浦堤　保留所有權利" data-en="© 2026 Pu-Ti Lo · All rights reserved">© 2026 羅浦堤　保留所有權利</p>
+  <p data-zh="台灣" data-en="Taiwan">台灣</p>
+</footer>
+
+<script>
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button,.work-card,.node-photo').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='44px';ring.style.height='44px';cursor.style.transform='translate(-50%,-50%) scale(0.4)';});
+  el.addEventListener('mouseleave',()=>{ring.style.width='28px';ring.style.height='28px';cursor.style.transform='translate(-50%,-50%) scale(1)';});
+});
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+setTimeout(()=>document.getElementById('heroBg').classList.add('loaded'),100);
+const langBtn=document.getElementById('langBtn');
+let isEN=false;
+langBtn.addEventListener('click',()=>{
+  isEN=!isEN;langBtn.textContent=isEN?'中':'EN';
+  document.querySelectorAll('[data-zh][data-en]').forEach(el=>el.innerHTML=isEN?el.dataset.en:el.dataset.zh);
+  document.querySelectorAll('.zh').forEach(el=>el.style.display=isEN?'none':'block');
+  document.querySelectorAll('.en').forEach(el=>el.style.display=isEN?'block':'none');
+});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const ew=document.getElementById('exhibWrapper');
+const exhibFade=document.getElementById('exhibFade');
+let eiDown=false,eStartX,eSl;
+ew.addEventListener('scroll',()=>{const atEnd=ew.scrollLeft+ew.clientWidth>=ew.scrollWidth-8;exhibFade.style.opacity=atEnd?'0':'1';});
+ew.addEventListener('mousedown',e=>{eiDown=true;eStartX=e.pageX-ew.offsetLeft;eSl=ew.scrollLeft;});
+ew.addEventListener('mouseleave',()=>eiDown=false);
+ew.addEventListener('mouseup',()=>eiDown=false);
+ew.addEventListener('mousemove',e=>{if(!eiDown)return;e.preventDefault();ew.scrollLeft=eSl-(e.pageX-ew.offsetLeft-eStartX)*1.5;});
+let isDown=false,startX,sl;
+pw.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-pw.offsetLeft;sl=pw.scrollLeft;});
+pw.addEventListener('mouseleave',()=>isDown=false);
+pw.addEventListener('mouseup',()=>isDown=false);
+pw.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();pw.scrollLeft=sl-(e.pageX-pw.offsetLeft-startX)*1.5;});
+</script>
+</body>
+</html>
