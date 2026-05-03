@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -133,125 +132,127 @@ section{padding:7rem 3rem}
 .poem-title{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem;font-style:normal}
 .poem-text{font-size:.82rem;line-height:2.2;color:var(--text-dim);font-style:italic;text-align:center;letter-spacing:.05em}
 
+
 .texture-bg{
-background-image:url(‘bg.png’);
-background-repeat:repeat;
-background-size:300px 300px;
-background-blend-mode:overlay;
+  background-image:url('bg.png');
+  background-repeat:repeat;
+  background-size:300px 300px;
+  background-blend-mode:overlay;
 }
 
 .pull-quote{
-position:relative;
-margin:0;
-padding:1.5rem 1.5rem 1.5rem 2rem;
-border-left:1px solid var(–gold-dim);
-background:rgba(201,169,110,0.04);
-max-width:220px;
+  position:relative;
+  margin:0;
+  padding:1.5rem 1.5rem 1.5rem 2rem;
+  border-left:1px solid var(--gold-dim);
+  background:rgba(201,169,110,0.04);
+  max-width:220px;
 }
 .pull-quote::before{
-content:’’;
-position:absolute;
-top:0;left:0;
-width:1px;height:2rem;
-background:var(–gold);
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:1px;height:2rem;
+  background:var(--gold);
 }
 .pull-quote-text{
-font-size:.78rem;
-line-height:2;
-color:var(–text-dim);
-font-style:italic;
-letter-spacing:.03em;
+  font-size:.78rem;
+  line-height:2;
+  color:var(--text-dim);
+  font-style:italic;
+  letter-spacing:.03em;
 }
 .pull-quote-source{
-display:block;
-margin-top:1.75rem;
-padding-top:.75rem;
-border-top:1px solid rgba(122,96,56,0.35);
-font-family:‘Tenor Sans’,sans-serif;
-font-size:.6rem;
-letter-spacing:.25em;
-text-transform:uppercase;
-color:var(–gold-dim);
+  display:block;
+  margin-top:1.75rem;
+  padding-top:.75rem;
+  border-top:1px solid rgba(122,96,56,0.35);
+  font-family:'Tenor Sans',sans-serif;
+  font-size:.6rem;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:var(--gold-dim);
 }
 
+
 .texture-overlay{position:absolute;inset:0;pointer-events:none;z-index:0}
-#process{background-color:var(–bg2);border-top:1px solid var(–border);border-bottom:1px solid var(–border);overflow:hidden;position:relative}
-#process::before{content:’’;position:absolute;inset:0;background-image:url(‘bg.png’);background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
+#process{background-color:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative}
+#process::before{content:'';position:absolute;inset:0;background-image:url('bg.png');background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
 #process>*{position:relative;z-index:1}
-.process-title{font-family:‘Noto Serif TC’,serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;margin-bottom:1rem}
-.process-title em{font-style:italic;color:var(–text-dim)}
+.process-title{font-family:'Noto Serif TC',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;margin-bottom:1rem}
+.process-title em{font-style:italic;color:var(--text-dim)}
 .process-subtitle{font-size:.95rem;color:#c8c3bb;line-height:1.8;margin-bottom:4rem;max-width:560px}
 .process-scroll-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;cursor:grab;padding-bottom:2rem}
 .process-scroll-wrapper:active{cursor:grabbing}
 .process-scroll-wrapper::-webkit-scrollbar{height:1px}
-.process-scroll-wrapper::-webkit-scrollbar-track{background:var(–border)}
-.process-scroll-wrapper::-webkit-scrollbar-thumb{background:var(–gold-dim)}
+.process-scroll-wrapper::-webkit-scrollbar-track{background:var(--border)}
+.process-scroll-wrapper::-webkit-scrollbar-thumb{background:var(--gold-dim)}
 .process-track{display:flex;align-items:center;gap:0;padding:2rem 0;width:max-content}
 .process-node{display:flex;flex-direction:column;align-items:center;width:260px;flex-shrink:0}
-.node-photo{width:180px;height:180px;border-radius:50%;overflow:hidden;border:1.5px solid var(–gold-dim);position:relative;cursor:none;transition:border-color .4s,transform .4s;transform:translateZ(0);-webkit-mask-image:-webkit-radial-gradient(white,black)}
-.node-photo:hover{border-color:var(–gold-dim);transform:scale(1.04)}
+.node-photo{width:180px;height:180px;border-radius:50%;overflow:hidden;border:1.5px solid var(--gold-dim);position:relative;cursor:none;transition:border-color .4s,transform .4s;transform:translateZ(0);-webkit-mask-image:-webkit-radial-gradient(white,black)}
+.node-photo:hover{border-color:var(--gold-dim);transform:scale(1.04)}
 .node-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.8);transition:filter .4s;border-radius:50%;display:block}
 .node-photo:hover img{filter:brightness(1)}
-.node-number{font-family:‘Tenor Sans’,sans-serif;font-size:.5rem;letter-spacing:.2em;color:var(–gold);margin-bottom:.4rem;display:block}
+.node-number{font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.2em;color:var(--gold);margin-bottom:.4rem;display:block}
 .node-label{margin-top:1.25rem;text-align:center}
-.node-step{font-family:‘Tenor Sans’,sans-serif;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(–gold);margin-bottom:.4rem;line-height:2}
+.node-step{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;line-height:2}
 .node-desc{font-size:.85rem;color:#c8c3bb;line-height:1.7;text-align:center;max-width:200px}
 .process-connector{width:80px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;margin-top:-60px}
-.connector-line{width:100%;height:1px;background:none;border-top:1px dashed var(–gold-dim);position:relative}
-.connector-arrow{position:absolute;right:-4px;top:-4px;width:8px;height:8px;border-right:1px solid var(–gold-dim);border-top:1px solid var(–gold-dim);transform:rotate(45deg)}
-#artist{background:var(–bg)}
+.connector-line{width:100%;height:1px;background:none;border-top:1px dashed var(--gold-dim);position:relative}
+.connector-arrow{position:absolute;right:-4px;top:-4px;width:8px;height:8px;border-right:1px solid var(--gold-dim);border-top:1px solid var(--gold-dim);transform:rotate(45deg)}
+#artist{background:var(--bg)}
 .artist-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
-.artist-photo{aspect-ratio:4/3;overflow:hidden;background:var(–surface)}
+.artist-photo{aspect-ratio:4/3;overflow:hidden;background:var(--surface)}
 .artist-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) grayscale(.1);transition:filter .6s}
 .artist-photo:hover img{filter:brightness(1) grayscale(0)}
-.artist-text h2{font-family:‘Noto Serif TC’,serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.15;margin-bottom:2.5rem}
-.artist-text h2 em{font-style:italic;color:var(–text-dim);display:block;font-size:.7em;font-weight:400}
+.artist-text h2{font-family:'Noto Serif TC',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.15;margin-bottom:2.5rem}
+.artist-text h2 em{font-style:italic;color:var(--text-dim);display:block;font-size:.7em;font-weight:400}
 .artist-text p{font-size:.95rem;line-height:2;color:#c8c3bb;margin-bottom:1.25rem}
 .artist-details{margin-top:2.5rem}
-.detail-row{padding:1.5rem 0;border-bottom:1px solid var(–border);display:grid;grid-template-columns:100px 1fr;gap:1.5rem;align-items:baseline}
-.detail-row:first-child{border-top:1px solid var(–border)}
-.detail-key{font-family:‘Tenor Sans’,sans-serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(–gold-dim)}
-.detail-val{font-size:.9rem;color:var(–text-dim);line-height:1.7}
-.detail-val strong{color:var(–text);font-weight:400}
-.detail-val .gold{color:var(–gold)}
-#media{background:var(–bg2);border-top:1px solid var(–border)}
+.detail-row{padding:1.5rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:100px 1fr;gap:1.5rem;align-items:baseline}
+.detail-row:first-child{border-top:1px solid var(--border)}
+.detail-key{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim)}
+.detail-val{font-size:.9rem;color:var(--text-dim);line-height:1.7}
+.detail-val strong{color:var(--text);font-weight:400}
+.detail-val .gold{color:var(--gold)}
+#media{background:var(--bg2);border-top:1px solid var(--border)}
 .media-list{display:flex;flex-direction:column}
-.media-item{display:flex;align-items:center;justify-content:space-between;padding:1.75rem 0;border-bottom:1px solid var(–border);text-decoration:none;color:var(–text-dim);transition:color .3s;cursor:none}
-.media-item:first-child{border-top:1px solid var(–border)}
-.media-item:hover{color:var(–white)}
-.media-item:hover .media-arrow{transform:translateX(6px);color:var(–gold)}
-.media-source{font-family:‘Tenor Sans’,sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(–gold-dim);min-width:160px}
+.media-item{display:flex;align-items:center;justify-content:space-between;padding:1.75rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text-dim);transition:color .3s;cursor:none}
+.media-item:first-child{border-top:1px solid var(--border)}
+.media-item:hover{color:var(--white)}
+.media-item:hover .media-arrow{transform:translateX(6px);color:var(--gold)}
+.media-source{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-dim);min-width:160px}
 .media-title{font-size:1rem;flex:1;margin:0 2rem;color:#c8c3bb}
-.media-date{font-family:‘Tenor Sans’,sans-serif;font-size:.58rem;letter-spacing:.15em;color:var(–gold-dim)}
-.media-arrow{color:var(–gold-dim);transition:transform .3s,color .3s;margin-left:1rem}
-#collect{background:var(–bg);position:relative}
-#collect::before{content:’’;position:absolute;inset:0;background-image:url(‘bg.png’);background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
+.media-date{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.15em;color:var(--gold-dim)}
+.media-arrow{color:var(--gold-dim);transition:transform .3s,color .3s;margin-left:1rem}
+#collect{background:var(--bg);position:relative}
+#collect::before{content:'';position:absolute;inset:0;background-image:url('bg.png');background-repeat:repeat;background-size:300px 300px;mix-blend-mode:screen;pointer-events:none;z-index:0}
 #collect>*{position:relative;z-index:1}
 .collect-inner{max-width:660px;margin:0 auto;text-align:center}
-.collect-inner h2{font-family:‘Noto Serif TC’,serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:2rem}
-.collect-inner h2 em{display:block;font-style:italic;color:var(–text-dim)}
-.collect-inner p{font-size:1rem;line-height:2;color:var(–text-dim);margin-bottom:.75rem}
-.collect-note{margin:2.5rem 0;padding:1.75rem;border:1px solid var(–border);position:relative}
-.collect-note::before{content:’’;position:absolute;top:-1px;left:2rem;width:2.5rem;height:1px;background:var(–gold)}
-.collect-note p{font-size:.85rem;color:var(–text-dim);margin:0}
-.collect-cta{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.5rem;padding:1rem 2.25rem;border:1px solid var(–gold-dim);color:var(–gold);text-decoration:none;font-family:‘Tenor Sans’,sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;transition:all .4s;cursor:none}
-.collect-cta:hover{background:var(–gold);color:var(–bg);border-color:var(–gold)}
-.collect-cta::after{content:‘→’;transition:transform .3s}
+.collect-inner h2{font-family:'Noto Serif TC',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:2rem}
+.collect-inner h2 em{display:block;font-style:italic;color:var(--text-dim)}
+.collect-inner p{font-size:1rem;line-height:2;color:var(--text-dim);margin-bottom:.75rem}
+.collect-note{margin:2.5rem 0;padding:1.75rem;border:1px solid var(--border);position:relative}
+.collect-note::before{content:'';position:absolute;top:-1px;left:2rem;width:2.5rem;height:1px;background:var(--gold)}
+.collect-note p{font-size:.85rem;color:var(--text-dim);margin:0}
+.collect-cta{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.5rem;padding:1rem 2.25rem;border:1px solid var(--gold-dim);color:var(--gold);text-decoration:none;font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;transition:all .4s;cursor:none}
+.collect-cta:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.collect-cta::after{content:'→';transition:transform .3s}
 .collect-cta:hover::after{transform:translateX(4px)}
-#contact{background:var(–bg2);border-top:1px solid var(–border)}
+#contact{background:var(--bg2);border-top:1px solid var(--border)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
-.contact-left h2{font-family:‘Noto Serif TC’,serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:1.5rem}
-.contact-left p{font-size:.95rem;line-height:2;color:var(–text-dim)}
+.contact-left h2{font-family:'Noto Serif TC',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:1.5rem}
+.contact-left p{font-size:.95rem;line-height:2;color:var(--text-dim)}
 .contact-links{display:flex;flex-direction:column;margin-top:3.5rem}
-.contact-link{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(–border);text-decoration:none;color:var(–text-dim);transition:color .3s;cursor:none}
-.contact-link:first-child{border-top:1px solid var(–border)}
-.contact-link:hover{color:var(–white)}
-.contact-link:hover .link-arrow{transform:translateX(4px);color:var(–gold)}
-.link-label{font-family:‘Tenor Sans’,sans-serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(–gold-dim)}
+.contact-link{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text-dim);transition:color .3s;cursor:none}
+.contact-link:first-child{border-top:1px solid var(--border)}
+.contact-link:hover{color:var(--white)}
+.contact-link:hover .link-arrow{transform:translateX(4px);color:var(--gold)}
+.link-label{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim)}
 .link-val{font-size:.9rem}
-.link-arrow{color:var(–gold-dim);transition:transform .3s,color .3s}
-footer{padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(–border)}
-footer p{font-family:‘Tenor Sans’,sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(–text-muted)}
+.link-arrow{color:var(--gold-dim);transition:transform .3s,color .3s}
+footer{padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border)}
+footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
@@ -260,49 +261,48 @@ footer p{font-family:‘Tenor Sans’,sans-serif;font-size:.55rem;letter-spacing
 .reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
 .zh{display:block}.en{display:none}
 @media(max-width:768px){
-nav{padding:1.25rem 1.5rem}
-.nav-name,.nav-links a,.lang-btn{white-space:nowrap}
-.nav-name{display:none}
-.nav-links{gap:.8rem}
-.nav-links a{font-size:.5rem;letter-spacing:.15em}
-.lang-btn{font-size:.5rem;letter-spacing:.1em;padding:.3rem .5rem}
-section{padding:5rem 1.5rem}
-.hero{padding:0 1.5rem 4rem}
-.hero-scroll{display:none}
-.works-grid{grid-template-columns:1fr}
-.work-poem{padding:2rem 1.5rem}
-.work-card.wide{grid-column:span 1;aspect-ratio:1}
-.artist-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
-.artist-photo{aspect-ratio:4/3}
-.media-item{flex-wrap:wrap;gap:.5rem}
-.media-title{margin:0;flex-basis:100%}
-footer{flex-direction:column;gap:1rem;text-align:center}
-.process-node{width:200px}
-.node-photo{width:140px;height:140px}
-.ig-section{grid-template-columns:1fr!important}
-.detail-row{grid-template-columns:80px 1fr;gap:1rem}
-#artist .artist-grid{display:flex!important;flex-direction:column;gap:2rem}
-#artist .artist-grid>div:first-child{order:1;width:100%}
-#artist .artist-grid>div:nth-child(2){order:2;width:100%}
-#artist .artist-grid>div:last-child{order:3;width:100%}
-.pull-quote{max-width:100%}
-.ig-block{grid-template-columns:1fr!important;grid-template-rows:auto auto}
-.ig-block>div:first-child{aspect-ratio:1}
-.ig-block>div:last-child{border-left:none!important;border-top:1px solid var(–border);padding:2rem 1.5rem!important}
-.process-scroll-wrapper{overflow-x:visible;cursor:default;padding-bottom:0}
-.process-track{flex-direction:column;align-items:center;width:100%;gap:0;padding:1rem 0}
-.process-node{width:100%;max-width:320px}
-.process-connector{width:auto;height:40px;margin-top:0!important;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:4px}
-.process-node{width:100%;max-width:320px;margin-bottom:1.5rem}
-.connector-line{width:1px;height:100%;border-top:none;border-left:1px dashed var(–gold-dim)}
-.connector-arrow{right:auto;top:auto;bottom:-4px;left:-4px;border-right:none;border-top:none;border-left:1px solid var(–gold-dim);border-bottom:1px solid var(–gold-dim);transform:rotate(-45deg)}
-.process-node .node-photo{margin-top:1.5rem!important}
-.cursor,.cursor-ring{display:none!important}
-*{cursor:auto!important}
-.ig-btn{padding:1.3rem 1.5rem!important;letter-spacing:.15em!important;align-self:stretch!important;justify-content:center!important;box-sizing:border-box!important}
+  nav{padding:1.25rem 1.5rem}
+  .nav-name,.nav-links a,.lang-btn{white-space:nowrap}
+  .nav-name{display:none}
+  .nav-links{gap:.8rem}
+  .nav-links a{font-size:.5rem;letter-spacing:.15em}
+  .lang-btn{font-size:.5rem;letter-spacing:.1em;padding:.3rem .5rem}
+  section{padding:5rem 1.5rem}
+  .hero{padding:0 1.5rem 4rem}
+  .hero-scroll{display:none}
+  .works-grid{grid-template-columns:1fr}
+  .work-poem{padding:2rem 1.5rem}
+  .work-card.wide{grid-column:span 1;aspect-ratio:1}
+  .artist-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .artist-photo{aspect-ratio:4/3}
+  .media-item{flex-wrap:wrap;gap:.5rem}
+  .media-title{margin:0;flex-basis:100%}
+  footer{flex-direction:column;gap:1rem;text-align:center}
+  .process-node{width:200px}
+  .node-photo{width:140px;height:140px}
+  .ig-section{grid-template-columns:1fr!important}
+  .detail-row{grid-template-columns:80px 1fr;gap:1rem}
+  #artist .artist-grid{display:flex!important;flex-direction:column;gap:2rem}
+  #artist .artist-grid>div:first-child{order:1;width:100%}
+  #artist .artist-grid>div:nth-child(2){order:2;width:100%}
+  #artist .artist-grid>div:last-child{order:3;width:100%}
+  .pull-quote{max-width:100%}
+  .ig-block{grid-template-columns:1fr!important;grid-template-rows:auto auto}
+  .ig-block>div:first-child{aspect-ratio:1}
+  .ig-block>div:last-child{border-left:none!important;border-top:1px solid var(--border);padding:2rem 1.5rem!important}
+  .process-scroll-wrapper{overflow-x:visible;cursor:default;padding-bottom:0}
+  .process-track{flex-direction:column;align-items:center;width:100%;gap:0;padding:1rem 0}
+  .process-node{width:100%;max-width:320px}
+  .process-connector{width:auto;height:40px;margin-top:0!important;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:4px}
+  .process-node{width:100%;max-width:320px;margin-bottom:1.5rem}
+  .connector-line{width:1px;height:100%;border-top:none;border-left:1px dashed var(--gold-dim)}
+  .connector-arrow{right:auto;top:auto;bottom:-4px;left:-4px;border-right:none;border-top:none;border-left:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim);transform:rotate(-45deg)}
+  .process-node .node-photo{margin-top:1.5rem!important}
+  .cursor,.cursor-ring{display:none!important}
+  *{cursor:auto!important}
+  .ig-btn{padding:1.3rem 1.5rem!important;letter-spacing:.15em!important;align-self:stretch!important;justify-content:center!important;box-sizing:border-box!important}
 }
 </style>
-
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
@@ -597,87 +597,84 @@ footer{flex-direction:column;gap:1rem;text-align:center}
     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;cursor:grab;padding-bottom:2rem;" id="exhibWrapper">
     <div style="display:flex;gap:2px;width:max-content;" id="exhibTrack">
 
-```
-  <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
-    <div style="overflow:hidden;aspect-ratio:16/10;">
-      <img src="stage.jpg" alt="聲之形 畢業鋼琴獨奏會" style="width:100%;height:100%;object-fit:cover;filter:brightness(.85);">
-    </div>
-    <div style="padding:1.5rem;">
-      <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.06.04</p>
-      <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">聲之形</span><span class="en">The Form of Sound</span></p>
-      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">畢業鋼琴獨奏會 × 鑲嵌折紙燈光秀<br>台北藝術大學音樂廳</span><span class="en">Graduate Piano Recital × Origami Light Installation<br>TNUA Concert Hall, Taipei</span></p>
-    </div>
-  </div>
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="stage.jpg" alt="聲之形 畢業鋼琴獨奏會" style="width:100%;height:100%;object-fit:cover;filter:brightness(.85);">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.06.04</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">聲之形</span><span class="en">The Form of Sound</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">畢業鋼琴獨奏會 × 鑲嵌折紙燈光秀<br>台北藝術大學音樂廳</span><span class="en">Graduate Piano Recital × Origami Light Installation<br>TNUA Concert Hall, Taipei</span></p>
+        </div>
+      </div>
 
-  <div style="width:220px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
-    <div style="overflow:hidden;height:200px;background:#050505;display:flex;align-items:center;justify-content:center;">
-      <img src="poster.jpg" alt="聲之形 音樂會海報" style="width:100%;height:100%;object-fit:contain;">
-    </div>
-    <div style="padding:1.5rem;">
-      <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.06.04</p>
-      <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">聲之形　海報</span><span class="en">The Form of Sound — Poster</span></p>
-      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">海報背景均由折紙作品構成</span><span class="en">Poster artwork composed of original origami pieces</span></p>
-    </div>
-  </div>
+      <div style="width:220px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;height:200px;background:#050505;display:flex;align-items:center;justify-content:center;">
+          <img src="poster.jpg" alt="聲之形 音樂會海報" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.06.04</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">聲之形　海報</span><span class="en">The Form of Sound — Poster</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">海報背景均由折紙作品構成</span><span class="en">Poster artwork composed of original origami pieces</span></p>
+        </div>
+      </div>
 
-  <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
-    <div style="overflow:hidden;aspect-ratio:16/10;">
-      <img src="exhibition-1.jpg" alt="2025濮院折紙展會" style="width:100%;height:100%;object-fit:cover;">
-    </div>
-    <div style="padding:1.5rem;">
-      <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
-      <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
-      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">展覽現場</span><span class="en">Exhibition hall</span></p>
-    </div>
-  </div>
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-1.jpg" alt="2025濮院折紙展會" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">展覽現場</span><span class="en">Exhibition hall</span></p>
+        </div>
+      </div>
 
-  <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
-    <div style="overflow:hidden;aspect-ratio:16/10;">
-      <img src="exhibition-2.jpg" alt="2025濮院折紙展會 夜景" style="width:100%;height:100%;object-fit:cover;">
-    </div>
-    <div style="padding:1.5rem;">
-      <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
-      <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
-      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">展館外牆夜景</span><span class="en">Venue exterior at night</span></p>
-    </div>
-  </div>
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-2.jpg" alt="2025濮院折紙展會 夜景" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">展館外牆夜景</span><span class="en">Venue exterior at night</span></p>
+        </div>
+      </div>
 
-  <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
-    <div style="overflow:hidden;aspect-ratio:16/10;">
-      <img src="exhibition-3.jpg" alt="2025濮院折紙展會 交流" style="width:100%;height:100%;object-fit:cover;">
-    </div>
-    <div style="padding:1.5rem;">
-      <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
-      <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
-      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">藝術家交流現場</span><span class="en">Artist exchange</span></p>
-    </div>
-  </div>
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-3.jpg" alt="2025濮院折紙展會 交流" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">藝術家交流現場</span><span class="en">Artist exchange</span></p>
+        </div>
+      </div>
 
-  <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
-    <div style="overflow:hidden;aspect-ratio:16/10;">
-      <img src="exhibition-4.jpg" alt="2025濮院折紙展會 Origami Convention" style="width:100%;height:100%;object-fit:cover;">
-    </div>
-    <div style="padding:1.5rem;">
-      <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
-      <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
-      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">藝術家與主辦方合影</span><span class="en">Artist with the convention organizers</span></p>
-    </div>
-  </div>
+      <div style="width:320px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;aspect-ratio:16/10;">
+          <img src="exhibition-4.jpg" alt="2025濮院折紙展會 Origami Convention" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2025.07　上海</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;"><span class="zh">濮院折紙展會</span><span class="en">Puyuan Origami Convention</span></p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">藝術家與主辦方合影</span><span class="en">Artist with the convention organizers</span></p>
+        </div>
+      </div>
 
-  <div style="width:220px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
-    <div style="overflow:hidden;height:200px;background:#050505;display:flex;align-items:center;justify-content:center;">
-      <img src="joisel-award-2025.jpg" alt="2025 Joisel Award 三項大獎 得獎截圖" style="width:100%;height:100%;object-fit:contain;">
-    </div>
-    <div style="padding:1.5rem;">
-      <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2026.04.27</p>
-      <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;">2025 Joisel Award</p>
-      <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">三項大獎得獎公告<br>抽象技術首獎・人氣獎・抽象詮釋第二名</span><span class="en">Three-award announcement<br>Abstract Technical 1st · Popular Vote · Abstract Interpretation 2nd</span></p>
-    </div>
-  </div>
+      <div style="width:220px;flex-shrink:0;background:var(--surface);display:flex;flex-direction:column;">
+        <div style="overflow:hidden;height:200px;background:#050505;display:flex;align-items:center;justify-content:center;">
+          <img src="joisel-award-2025.jpg" alt="2025 Joisel Award 三項大獎 得獎截圖" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="font-family:'Tenor Sans',sans-serif;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">2026.04.27</p>
+          <p style="font-size:.9rem;color:var(--white);margin-bottom:.4rem;">2025 Joisel Award</p>
+          <p style="font-size:.78rem;color:var(--text-dim);line-height:1.7;"><span class="zh">三項大獎得獎公告<br>抽象技術首獎・人氣獎・抽象詮釋第二名</span><span class="en">Three-award announcement<br>Abstract Technical 1st · Popular Vote · Abstract Interpretation 2nd</span></p>
+        </div>
+      </div>
 
-</div>
-```
-
+    </div>
   </div>
     <div id="exhibFade" style="position:absolute;top:0;right:0;width:120px;height:100%;background:linear-gradient(to right,transparent,var(--bg2));pointer-events:none;z-index:2;transition:opacity .4s;"></div>
   </div>
@@ -788,6 +785,5 @@ pw.addEventListener('mouseleave',()=>isDown=false);
 pw.addEventListener('mouseup',()=>isDown=false);
 pw.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();pw.scrollLeft=sl-(e.pageX-pw.offsetLeft-startX)*1.5;});
 </script>
-
 </body>
 </html>
