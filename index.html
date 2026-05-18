@@ -245,8 +245,8 @@ section{padding:7rem 3rem}
 .collect-note{margin:2.5rem 0;padding:1.75rem;border:1px solid var(--border);position:relative}
 .collect-note::before{content:'';position:absolute;top:-1px;left:2rem;width:2.5rem;height:1px;background:var(--gold)}
 .collect-note p{font-size:.85rem;color:var(--text-dim);margin:0}
-.collect-cta{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.5rem;padding:1rem 2.25rem;border:1px solid var(--gold-dim);color:var(--gold);text-decoration:none;font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;transition:all .4s;cursor:none}
-.collect-cta:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.collect-cta{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.5rem;padding:1rem 2.25rem;border:1px solid var(--gold);background:var(--gold);color:var(--bg);text-decoration:none;font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;transition:background .6s ease,color .6s ease;cursor:none;position:relative}
+.collect-cta:hover{background:rgba(0,0,0,0);color:var(--gold)}
 .collect-cta::after{content:'→';transition:transform .3s}
 .collect-cta:hover::after{transform:translateX(4px)}
 #contact{background:var(--bg2);border-top:1px solid var(--border)}
@@ -768,7 +768,7 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2e
     <p class="reveal reveal-d1"><span class="zh">所有作品均為<strong>原創設計</strong>、<strong>親手折疊</strong>，<strong>限量</strong>或<span class="dot-em" style="font-weight:700"><span class="dc">唯</span><span class="dc">一</span><span class="dc">件</span></span>。</span><span class="en">All works are original designs, hand-folded by the artist. Each piece is produced in limited edition or as a <span class="marker">unique work</span>.</span></p>
     <p class="reveal reveal-d2"><span class="zh">接受<strong style="color:var(--text)">客製化委託</strong>——紙張顏色、材質可依空間需求調整。製作週期約六至十週。</span><span class="en">We welcome <strong style="color:var(--text)">bespoke commissions</strong> — paper color and material may be tailored to your space. Production time is approximately six to ten weeks.</span></p>
     <div class="collect-note reveal reveal-d3"><p><span class="zh">作品價格依尺寸與複雜度議定。歡迎來信洽詢收藏或委託事宜。</span><span class="en">Pricing varies according to scale and complexity. Enquiries regarding acquisition or commission are warmly welcomed.</span></p></div>
-    <a href="#contact" class="collect-cta reveal reveal-d4"><span data-zh="詢問收藏" data-en="Enquire">詢問收藏</span></a>
+    <a href="#contact" class="collect-cta reveal reveal-d4" style="transition:all .4s;" onmouseenter="this.style.background='transparent';this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseleave="this.style.background='var(--gold)';this.style.color='var(--bg)';this.style.borderColor='var(--gold)'"><span data-zh="詢問收藏" data-en="Enquire">詢問收藏</span></a>
   </div>
   <div class="mockup-float">
     <img src="collect-mockup-star.jpg" alt="星形作品 掛牆情境" class="mockup-right">
