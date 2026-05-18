@@ -107,6 +107,15 @@ section{padding:7rem 3rem}
 .section-tag{font-family:'Tenor Sans',sans-serif;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:3.5rem;display:flex;align-items:center;gap:1.5rem}
 .section-tag::after{content:'';flex:1;max-width:100px;height:1px;background:var(--border)}
 .section-tag.no-line::after{display:none}
+.mockup-top{display:flex;justify-content:center;padding:0 2rem 5rem}
+.mockup-top img{width:min(560px,80vw);height:auto;display:block;box-shadow:0 8px 32px rgba(0,0,0,.5);transform:rotate(-3deg);transition:transform .4s}
+.mockup-top img:hover{transform:rotate(-1deg) scale(1.02)}
+.mockup-float{display:flex;flex-direction:column;align-items:center;gap:3rem;padding:6rem 2rem 0}
+.mockup-left,.mockup-right{width:min(560px, 80vw);height:auto;box-shadow:0 8px 32px rgba(0,0,0,.5);transition:transform .4s;display:block;align-self:center}
+.mockup-left{transform:rotate(-3deg)}
+.mockup-right{transform:rotate(3deg)}
+.mockup-left:hover{transform:rotate(-1deg) scale(1.02)}
+.mockup-right:hover{transform:rotate(1deg) scale(1.02)}
 .dot-em .dc{display:inline-block;position:relative}
 .dot-em .dc::after{content:'';position:absolute;bottom:var(--dot-bottom, 0px);left:50%;transform:translateX(-50%);width:var(--dot-size, 3px);height:var(--dot-size, 3px);border-radius:50%;background:var(--gold)}
 .marker{background:linear-gradient(transparent 55%, rgba(201,169,110,0.35) 55%);}
@@ -301,6 +310,7 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2e
   .process-node .node-photo{margin-top:1.5rem!important}
   .cursor,.cursor-ring{display:none!important}
   *{cursor:auto!important}
+  #collect .mockup-left,#collect .mockup-right{width:90vw}
   .ig-btn{padding:1.3rem 1.5rem!important;letter-spacing:.15em!important;align-self:stretch!important;justify-content:center!important;box-sizing:border-box!important}
 }
 </style>
@@ -748,7 +758,10 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2e
 
 <div class="divider"></div>
 
-<section id="collect" class="texture-bg">
+<section id="collect" class="texture-bg" style="position:relative;overflow:visible;">
+  <div class="mockup-top">
+    <img src="collect-mockup-hex.jpg" alt="夢幻泡影 掛牆情境" class="mockup-left">
+  </div>
   <div class="collect-inner">
     <div class="section-tag no-line reveal" style="justify-content:center;" data-zh="收藏作品" data-en="Collect a Work">收藏作品</div>
     <h2 class="reveal"><span data-zh="每件作品" data-en="Every work">每件作品</span><em data-zh='皆為<span style="color:var(--gold)">唯一</span>' data-en='is <span style="color:var(--gold)">singular</span>'>皆為<span style="color:var(--gold)">唯一</span></em></h2>
@@ -756,6 +769,9 @@ footer p{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.2e
     <p class="reveal reveal-d2"><span class="zh">接受<strong style="color:var(--text)">客製化委託</strong>——紙張顏色、材質可依空間需求調整。製作週期約六至十週。</span><span class="en">We welcome <strong style="color:var(--text)">bespoke commissions</strong> — paper color and material may be tailored to your space. Production time is approximately six to ten weeks.</span></p>
     <div class="collect-note reveal reveal-d3"><p><span class="zh">作品價格依尺寸與複雜度議定。歡迎來信洽詢收藏或委託事宜。</span><span class="en">Pricing varies according to scale and complexity. Enquiries regarding acquisition or commission are warmly welcomed.</span></p></div>
     <a href="#contact" class="collect-cta reveal reveal-d4"><span data-zh="詢問收藏" data-en="Enquire">詢問收藏</span></a>
+  </div>
+  <div class="mockup-float">
+    <img src="collect-mockup-star.jpg" alt="星形作品 掛牆情境" class="mockup-right">
   </div>
 </section>
 
